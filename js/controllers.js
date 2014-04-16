@@ -21,18 +21,31 @@ angular.module('myApp.controllers', [])
             }
 
         })
-        .controller('sweepstakesCTRL', function($scope) {
-            $scope.q1 = {};
-            $scope.q2 = { };
+        .controller('sweepstakesCTRL', function($scope, $http) {
 
-            $scope.q3 = {};
-            $scope.q4 = { };
+            $http.get('js/products.json').success(function(data) {
+
+                $scope.q1 = data.q1;
+                $scope.q2 = data.q2;
+
+                $scope.q3 = data.q3;
+                $scope.q4 = data.q4;
 
 
-            $scope.a4 ={};
+                $scope.a4 = data.a4;
 
 
-            $scope.designers = [ ];
+                $scope.designers = data.designers;
+                console.log($scope.q1);
+                console.log($scope.q2);
+                console.log($scope.q3);
+                console.log($scope.q4);
+                console.log($scope.a4);
+                console.log($scope.designers);
+
+
+            })
+
 
 
         });
