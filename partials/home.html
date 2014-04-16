@@ -1,0 +1,9 @@
+
+<div id="imageHolder" ng-click="change()">
+    <img class="main" ng-src="img/{{set[0]}}" ng-show=" currentIndex === $index" ng-repeat-start="set in imagesets">
+    <img class="f2" ng-src="img/{{set[1]}}" ng-show=" currentIndex === $index">
+    <img class="f3" ng-src="img/{{set[2]}}" ng-show=" currentIndex === $index">
+    <img class="f4" ng-src="img/{{set[3]}}"  ng-show=" currentIndex === $index">
+    <img class="f5" ng-src="img/{{set[4]}}" ng-show=" currentIndex === $index">
+    <img class="f6" ng-src="img/{{set[5]}}" ng-show=" currentIndex === $index" ng-repeat-end>
+</div>

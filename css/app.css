@@ -1,0 +1,176 @@
+.header{
+
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
+#mainwrapper{
+
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
+
+.header img{
+    width: 64%;
+     
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 15%; 
+    overflow: hidden;
+    text-align: center;
+}
+.mainBody{
+    position: relative;
+    width: 100%;    
+    height: 70%;
+    overflow: hidden;
+}
+.footer{    
+    position: relative;
+    width: 100%;    
+    height: 15%;
+    background: yellow;
+    overflow: hidden;
+}
+#imageHolder{
+    position: relative;
+    width: 100%;    
+    height: 100%;
+}
+#imageHolder img{
+    position: absolute;
+
+}
+.main{
+    left: 0;
+    top: 275px;
+}
+.f2{
+
+    right: 100px;
+    top: 37px;
+}
+.f3{
+
+    right: 200px;
+    top: 217px;
+}
+.f4{
+
+    right: 114px;
+    top: 418px;
+    width: 400px;
+}
+.f5{
+
+    right: 185px;
+    top: 575px;
+}
+.f6{
+
+    right: 69px;
+    top: 775px;
+}
+
+
+
+.main.ng-hide-add,
+.main.ng-hide-remove {
+    -webkit-transition:0.5s ease-in-out all;
+    transition:0.5s ease-in-out all;
+    -webkit-transition-delay:0.2s;
+    transition-delay:0.2s;
+    /* remember to add this */
+    display:block!important;
+    opacity:1;
+}
+.main.ng-hide {
+
+    opacity:0;
+
+    -webkit-transform: translate(-800px, 0px);
+    transform: translate(-800px, 0px);
+}
+.f2.ng-hide-add,
+.f2.ng-hide-remove {
+    -webkit-transition:0.5s ease-in-out all;
+    transition:0.5s ease-in-out all;
+    -webkit-transition-delay:0.5s;
+    transition-delay:0.5s;
+    /* remember to add this */
+    display:block!important;
+    opacity:1;
+}
+.f2.ng-hide { 
+    opacity:0;  
+    -webkit-transform: translate( 800px, 0px);
+    transform: translate( 800px, 0px);
+}
+.f3.ng-hide-add,
+.f3.ng-hide-remove {
+    -webkit-transition:0.5s ease-in-out all;
+    transition:0.5s ease-in-out all;
+    -webkit-transition-delay:0.3s;
+    transition-delay:0.3s;
+    /* remember to add this */
+    display:block!important;
+    opacity:1;
+}
+.f3.ng-hide { 
+    opacity:0; 
+    -webkit-transform: translate(800px, 0px);
+    transform: translate(800px, 0px);
+}
+.f4.ng-hide-add,
+.f4.ng-hide-remove {
+    -webkit-transition:0.5s ease-in-out all;
+    transition:0.5s ease-in-out all;
+    -webkit-transition-delay:0.4s;
+    transition-delay:0.4s;
+    /* remember to add this */
+    display:block!important;
+    opacity:1;
+}
+.f4.ng-hide { 
+    opacity:0; 
+    -webkit-transform: translate(800px, 0px);
+    transform: translate(800px, 0px);
+}
+.f5.ng-hide-add,
+.f5.ng-hide-remove {
+    -webkit-transition:0.5s ease-in-out all;
+    transition:0.5s ease-in-out all;
+    -webkit-transition-delay:0.5s;
+    transition-delay:0.5s;
+    /* remember to add this */
+    display:block!important;
+    opacity:1;
+}
+.f5.ng-hide { 
+    opacity:0; 
+    -webkit-transform: translate(800px, 0px);
+    transform: translate(800px, 0px);
+}
+.f6.ng-hide-add,
+.f6.ng-hide-remove {
+    -webkit-transition:0.5s ease-in-out all;
+    transition:0.5s ease-in-out all;
+    -webkit-transition-delay:0.6s;
+    transition-delay:0.6s;
+    /* remember to add this */
+    display:block!important;
+    opacity:1;
+}
+.f6.ng-hide { 
+    opacity:0; 
+    -webkit-transform: translate(800px, 0px);
+    transform: translate(800px, 0px);
+}

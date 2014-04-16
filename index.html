@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>My AngularJS App</title>
+        <link rel="stylesheet" href="css/app.css"/>
+    </head>
+    <body> 
+        <div id="mainwrapper">
+            <div class="header">
+                <img src="img/vmlogo.png" alt="logo">
+            </div>
+
+
+            <div class="mainBody" ng-view></div>
+
+            <div class="footer"></div>
+        </div>
+
+        <script src="lib/angular.js"></script>
+        <script src="lib/angular-route.js"></script>
+        <script src="lib/angular-animate.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/directives.js"></script>
+    </body>
+</html>
