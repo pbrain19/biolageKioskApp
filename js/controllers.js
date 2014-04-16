@@ -23,6 +23,22 @@ angular.module('myApp.controllers', [])
         })
         .controller('sweepstakesCTRL', function($scope, $http) {
 
+            $scope.answerone = function(choice) {
+                $scope.a1 = choice;
+            };
+
+            $scope.answertwo = function(choice) {
+                $scope.a2 = choice;
+            };
+            $scope.answerthree = function(choice) {
+                $scope.a3 = choice;
+
+
+            }
+            
+            $scope.answerfour=function(choice){
+                $scope.userIntent=choice;
+            }
             $http.get('js/products.json').success(function(data) {
 
                 $scope.q1 = data.q1;
@@ -36,9 +52,7 @@ angular.module('myApp.controllers', [])
 
 
                 $scope.designers = data.designers;
-                console.log($scope.q1);
-                console.log($scope.q2);
-                console.log($scope.q3);
+             
                 console.log($scope.q4);
                 console.log($scope.a4);
                 console.log($scope.designers);

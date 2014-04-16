@@ -1,3 +1,27 @@
 <input placeholder="Enter Your Email" ng-model="user.email">
 <select ng-model="user.desi" ng-options="c for c in designers"></select><br>
   
+<h1>{{q1.q}}</h1>
+<div ng-repeat="choice in q1.choices" ng-click="answerone(choice)">
+    {{choice.answer}}
+</div> 
+
+<h1>{{q2.q}}</h1>
+<div ng-repeat="choice in q2.choices" ng-click="answertwo(choice)">
+    {{choice}}
+</div> 
+
+<h1>{{q3.q}}</h1>
+<div ng-repeat="choice in q3.choices" ng-click="answerthree(choice)">
+    {{choice.answer}}
+</div> 
+
+{{a3}}
+
+
+<h1>{{q4.q}}</h1>
+<div ng-repeat="choice in q4.choices" ng-click="answerfour(choice)">
+    {{choice}}
+</div> 
+
+{{userIntent}}

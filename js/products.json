@@ -1,6 +1,6 @@
 {
     "q1": {
-        "question": "How would you describe the texture of your hair?",
+        "q": "How would you describe the texture of your hair?",
         "choices": [
             {
                 "title": "ExquisiteOil Strengthening Treatment",
@@ -51,7 +51,7 @@
                 "title": "SMOOTHPROOF",
                 "description": "Suelta el cabello encrespado y el volumen no deseado con las fórmulas más modernas inspiradas por la naturaleza que imitan las propiedades de la flor camelia que resiste el agua.  Las formulas trabajan para encapsular al cabello y alinear la cutícula para evitar la entrada de la humedad para mejor control y suavidad hasta en tiempo de 97% de humedad. Cuando se usa el sistema del champú, acondicionador y suero SMOOTHPROOF vs. un champú no acondicionador.",
                 "image": "img/products/smoothproof.jpg",
-                "answer": "Protecting color"
+                "answer": "Reducing frizz"
             }
         ]
     },
