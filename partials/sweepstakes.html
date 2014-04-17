@@ -1,32 +1,47 @@
 <input placeholder="Enter Your Email" ng-model="user.email">
 <select ng-model="user.desi" ng-options="c for c in designers"></select><br>
+<div ng-switch="sweepstakesPivot">
 
-<h1>{{q1.q}}</h1>
-<div class="choiceButtons" ng-repeat="choice in q1.choices" ng-click="answerone(choice)">
-    {{choice.answer}}
-</div> 
-{{a1}}
-<h1>{{q2.q}}</h1>
-<div class="choiceButtons" ng-repeat="choice in q2.choices" ng-click="answertwo(choice)">
-    {{choice}}
-</div> 
+    <div ng-switch-default>
+        <h1>{{q1.q}}</h1>
+        <div class="choiceButtons" ng-repeat="choice in q1.choices" ng-click="answerone(choice)">
+            {{choice.answer}}
+        </div>  
+    
+        <h1>{{q2.q}}</h1>
+        <div class="choiceButtons" ng-repeat="choice in q2.choices" ng-click="answertwo(choice)">
+            {{choice}}
+        </div> 
+    </div>
+    <div ng-switch-when="third">
+        <h1>{{q3.q}}</h1>
+        <div class="choiceButtons" ng-repeat="choice in q3.choices" ng-click="answerthree(choice)">
+            {{choice.answer}}
+        </div> 
+ 
+    </div>
+    <div ng-switch-when="fourth">
+        <h1>{{q4.q}}</h1>
+        <div class="choiceButtons" ng-repeat="choice in q4.choices" ng-click="answerfour(choice)">
+            {{choice}}
+        </div> 
 
-<h1>{{q3.q}}</h1>
-<div class="choiceButtons" ng-repeat="choice in q3.choices" ng-click="answerthree(choice)">
-    {{choice.answer}}
-</div> 
+        {{userIntent}}
+    </div>
+    <div ng-switch-when="answers">
+        <div ng-repeat="choice in a4" ng-show="userIntent == choice.intent && choice.hairStyle == a1.answer" >
+            {{a1}}
 
-{{a3}}
+            <br>
+            <br>
 
+            {{a3}}
+            <br>
+            <br>
+            {{choice}}
 
-<h1>{{q4.q}}</h1>
-<div class="choiceButtons" ng-repeat="choice in q4.choices" ng-click="answerfour(choice)">
-    {{choice}}
-</div> 
-
-{{userIntent}}
-
-<div ng-repeat="choice in a4" ng-show="userIntent == choice.intent && choice.hairStyle== a1.answer" >
-
-    {{choice}}
+        </div>
+    </div>
+    
+    <button ng-click="retakequiz()">Retake Quiz</button>
 </div>

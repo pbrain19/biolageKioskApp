@@ -22,42 +22,36 @@ angular.module('myApp.controllers', [])
 
         })
         .controller('sweepstakesCTRL', function($scope, $http) {
-
+            $scope.sweepstakesPivot = '';
             $scope.answerone = function(choice) {
                 $scope.a1 = choice;
             };
 
             $scope.answertwo = function(choice) {
                 $scope.a2 = choice;
+
+                $scope.sweepstakesPivot = 'third';
             };
             $scope.answerthree = function(choice) {
                 $scope.a3 = choice;
-
-
+                $scope.sweepstakesPivot = 'fourth';
             }
-            
-            $scope.answerfour=function(choice){
-                $scope.userIntent=choice;
+
+            $scope.answerfour = function(choice) {
+                $scope.userIntent = choice;
+                $scope.sweepstakesPivot = 'answers';
+            }
+            $scope.retakequiz=function(){
+                
+                   $scope.sweepstakesPivot = '';
             }
             $http.get('js/products.json').success(function(data) {
-
                 $scope.q1 = data.q1;
                 $scope.q2 = data.q2;
-
                 $scope.q3 = data.q3;
                 $scope.q4 = data.q4;
-
-
                 $scope.a4 = data.a4;
-
-
                 $scope.designers = data.designers;
-             
-                console.log($scope.q4);
-                console.log($scope.a4);
-                console.log($scope.designers);
-
-
             })
 
 
