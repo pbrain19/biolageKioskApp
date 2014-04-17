@@ -22,7 +22,13 @@ angular.module('myApp.controllers', [])
 
         })
         .controller('sweepstakesCTRL', function($scope, $http) {
-            $scope.sweepstakesPivot = '';
+            $scope.sweepstakesPivot = 0;
+            $scope.radio = {model: undefined};
+
+            $scope.radiosss = {model: undefined};
+            $scope.radios = {model: undefined};
+
+            $scope.radioss = {model: undefined};
             $scope.answerone = function(choice) {
                 $scope.a1 = choice;
             };
@@ -30,20 +36,17 @@ angular.module('myApp.controllers', [])
             $scope.answertwo = function(choice) {
                 $scope.a2 = choice;
 
-                $scope.sweepstakesPivot = 'third';
             };
             $scope.answerthree = function(choice) {
                 $scope.a3 = choice;
-                $scope.sweepstakesPivot = 'fourth';
             }
 
             $scope.answerfour = function(choice) {
                 $scope.userIntent = choice;
-                $scope.sweepstakesPivot = 'answers';
-            }
-            $scope.retakequiz=function(){
-                
-                   $scope.sweepstakesPivot = '';
+            };
+            $scope.retakequiz = function() {
+
+                $scope.sweepstakesPivot = '';
             }
             $http.get('js/products.json').success(function(data) {
                 $scope.q1 = data.q1;
@@ -53,7 +56,12 @@ angular.module('myApp.controllers', [])
                 $scope.a4 = data.a4;
                 $scope.designers = data.designers;
             })
-
+            $scope.prevq = function() {
+                $scope.sweepstakesPivot--;
+            }
+            $scope.nextq = function() {
+                $scope.sweepstakesPivot++;
+            }
 
 
         });
