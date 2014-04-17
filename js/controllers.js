@@ -24,7 +24,8 @@ angular.module('myApp.controllers', [])
         .controller('sweepstakesCTRL', function($scope, $http) {
             $scope.sweepstakesPivot = 0;
             $scope.radio = {model: undefined};
-
+            $scope.radiosss = {model: undefined};
+            $scope.radios = {model: undefined};
             $scope.radiosss = {model: undefined};
             $scope.radios = {model: undefined};
 

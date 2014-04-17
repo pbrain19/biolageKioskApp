@@ -219,14 +219,10 @@ html,body{
     font-size: 1.8em;    
 }
 .recProduct{
-
-    width: 100%;
-    
-
+    width: 100%; 
+    background: blue; 
     overflow: hidden;
-
     text-align: left;
-
 }
 .recProduct>div{
     display: inline-block;
