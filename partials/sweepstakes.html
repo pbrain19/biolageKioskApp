@@ -1,67 +1,70 @@
 <input placeholder="Enter Your Email" ng-model="user.email">
-<select ng-model="user.desi" ng-options="c for c in designers"></select><br>
-<div class="sweepprogress">
-</div>
+<select ng-model="user.desi" ng-options="c for c in designers"></select>
+<br>
 
-<h1 class="categoryHeader"  ng-show="sweepstakesPivot == 0">WHAT IS YOUR HAIR TYPE?</h1>
-<h2 class="questions" ng-show="sweepstakesPivot == 0">{{q1.q}}</h2>
-<div ng-show="sweepstakesPivot == 0" class="choiceButtons" ng-repeat="choice in q1.choices"
-     ng-model="radio.model" btn-radio="choice.answer" ng-click="answerone(choice)" >
-    {{choice.answer}}
-</div>  
-
-<h2 class="questions"  ng-show="sweepstakesPivot == 0">{{q2.q}}</h2>
-<div ng-show="sweepstakesPivot == 0" class="choiceButtons" ng-repeat="choice in q2.choices"
-     ng-model="radios.model" btn-radio="choice" ng-click="answertwo(choice)">
-    {{choice}}
-</div> 
-
-<h2 class="questions"  ng-show="sweepstakesPivot == 1">{{q3.q}}</h2>
-<div ng-show="sweepstakesPivot == 1" class="choiceButtons"  ng-model="radioss.model" btn-radio="choice.answer" 
-     ng-repeat="choice in q3.choices" ng-click="answerthree(choice)">
-    {{choice.answer}}
-</div> 
-
-
-<h2 class="questions"  ng-show="sweepstakesPivot == 2">{{q4.q}}</h2>
-<div ng-show="sweepstakesPivot == 2" class="choiceButtons" ng-model="radiosss.model" btn-radio="choice" 
-     ng-repeat="choice in q4.choices" ng-click="answerfour(choice)">
-    {{choice}}
-</div> 
-
-
-
-
-<!-- all results -->
-<h1 class="categoryHeader" ng-show="sweepstakesPivot == 3">YOUR RESULTS</h1>
-<p class="recomended" ng-show="sweepstakesPivot == 3">Based on the questions you answered, we recommend the following products. See 
-    your Biolage Stylist for more information or explore the products below.</p>
-<div ng-show="sweepstakesPivot == 3">
-    <div class="recProduct">
-        <div class="recImage">
-            <img ng-src="{{a1.image}}" ng-alt="{{a1.title}}">
-        </div>
-        <div>
-            <h1 > {{a1.title}}</h1>
-            <p>{{a1.description}}</p>
-        </div>
-
+<div class="sweepstakesholder" >
+    <div class="sweepprogress">
     </div>
+    <h1 class="categoryHeader"  ng-show="sweepstakesPivot == 0">WHAT IS YOUR HAIR TYPE?</h1>
+    <h2 class="questions" ng-show="sweepstakesPivot == 0">{{q1.q}}</h2>
+    <div ng-show="sweepstakesPivot == 0" class="choiceButtons" ng-repeat="choice in q1.choices"
+         ng-model="radio.model" btn-radio="choice.answer" ng-click="answerone(choice)" >
+        {{choice.answer}}
+    </div>  
+    <h2 class="questions"  ng-show="sweepstakesPivot == 0">{{q2.q}}</h2>
+    <div ng-show="sweepstakesPivot == 0" class="choiceButtons" ng-repeat="choice in q2.choices"
+         ng-model="radios.model" btn-radio="choice" ng-click="answertwo(choice)">
+        {{choice}}
+    </div> 
+    <h2 class="questions"  ng-show="sweepstakesPivot == 1">{{q3.q}}</h2>
+    <div ng-show="sweepstakesPivot == 1" class="choiceButtons"  ng-model="radioss.model" btn-radio="choice.answer" 
+         ng-repeat="choice in q3.choices" ng-click="answerthree(choice)">
+        {{choice.answer}}
+    </div> 
+    <h2 class="questions"  ng-show="sweepstakesPivot == 2">{{q4.q}}</h2>
+    <div ng-show="sweepstakesPivot == 2" class="choiceButtons" ng-model="radiosss.model" btn-radio="choice" 
+         ng-repeat="choice in q4.choices" ng-click="answerfour(choice)">
+        {{choice}}
+    </div> 
+    <!-- all results -->
+    <h1 class="categoryHeader" ng-show="sweepstakesPivot == 3">YOUR RESULTS</h1>
+    <p class="recomended" ng-show="sweepstakesPivot == 3">Based on the questions you answered, we recommend the following products. See 
+        your Biolage Stylist for more information or explore the products below.</p>
+    <div ng-show="sweepstakesPivot == 3">
+        <div class="recProduct">
+            <div class="recImage">
+                <img ng-src="{{a1.image}}" ng-alt="{{a1.title}}">
+            </div>
+            <div class="description">
+                <h1 > {{a1.title}}</h1>
+                <p>{{a1.description}}</p>
+            </div>
 
+        </div>
+        <div class="recProduct">
+            <div class="recImage">
+                <img ng-src="{{a3.image}}" ng-alt="{{a3.title}}">
+            </div>
+            <div class="description">
+                <h1 > {{a3.title}}</h1>
+                <p>{{a3.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div  ng-repeat="choice in a4" ng-show="userIntent == choice.intent && choice.hairStyle == a1.answer && sweepstakesPivot == 3" >
+        <h1>product</h1>
+        <div ng-repeat="product in choice.products" class="productlist">           
 
-
-    <br>
-    <br>
-
-    {{a3}}
+            <div>
+                <img ng-src="{{product.img}}" ng-alt="{{product.title}}">
+            </div>
+            <div >
+                <h4> {{product.title}}</h4>
+                <p>{{product.description}}</p>
+            </div>
+        </div> 
+    </div>
+    <button ng-click="prevq()" ng-hide="sweepstakesPivot <= 0">back</button>
+    <button ng-click="nextq()" ng-hide="sweepstakesPivot >= 3">NEXT</button>
+    <button ng-click="retakequiz()">Retake Quiz</button>
 </div>
-<div  ng-repeat="choice in a4" ng-show="userIntent == choice.intent && choice.hairStyle == a1.answer && sweepstakesPivot == 3" >
-    <h1>product</h1>
-    <div ng-repeat="product in choice.products">{{product}}</div> 
-
-</div>
-<button ng-click="prevq()" ng-hide="sweepstakesPivot <= 0">back</button>
-
-<button ng-click="nextq()" ng-hide="sweepstakesPivot >= 3">NEXT</button>
-
-<button ng-click="retakequiz()">Retake Quiz</button>
