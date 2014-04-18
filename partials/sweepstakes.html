@@ -3,7 +3,13 @@
 <br>
 
 <div class="sweepstakesholder" >
+
+
     <div class="sweepprogress">
+        <img src="img/sweepstatus/1.png"  ng-show="sweepstakesPivot == 0">
+        <img src="img/sweepstatus/2.png"  ng-show="sweepstakesPivot == 1">
+        <img src="img/sweepstatus/3.png"  ng-show="sweepstakesPivot == 2">
+        <img src="img/sweepstatus/4.png"  ng-show="sweepstakesPivot == 3">
     </div>
     <h1 class="categoryHeader"  ng-show="sweepstakesPivot == 0">WHAT IS YOUR HAIR TYPE?</h1>
     <h2 class="questions" ng-show="sweepstakesPivot == 0">{{q1.q}}</h2>
@@ -39,7 +45,6 @@
                 <h1 > {{a1.title}}</h1>
                 <p>{{a1.description}}</p>
             </div>
-
         </div>
         <div class="recProduct">
             <div class="recImage">

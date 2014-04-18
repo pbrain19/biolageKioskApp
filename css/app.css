@@ -196,9 +196,9 @@ html,body{
 }
 .sweepprogress{
 
-    width: 600px;
-    background: green;
-    height: 100px;
+    width: 800px;
+    
+ 
     margin: auto;
 }
 .categoryHeader{
@@ -248,17 +248,19 @@ html,body{
 }
 .productlist>div:first-child{
 
-    width: 150px;
+    width: 49%;
 }
 .productlist>div{
     display: inline-block;
 
+    float: left;
 }
 .productlist>div:last-child{
-    width: 64%;
+    width: 49%;
 
+    padding-top: 0px;
 }
 .productlist img{
-    height: 30%;
+    width: 89%;
 
 }
